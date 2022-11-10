@@ -1,0 +1,46 @@
+
+## Twitter Widgets
+
+推特组件
+
+https://developer.twitter.com/en/docs/twitter-for-websites/webpage-properties
+
+https://platform.twitter.com/embed/Tweet.html?dnt=true&embedId=twitter-widget-3&features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2Vuc2l0aXZlX21lZGlhX2ludGVyc3RpdGlhbF8xMzk2MyI6eyJidWNrZXQiOiJpbnRlcnN0aXRpYWwiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2V4cGVyaW1lbnRzX2Nvb2tpZV9leHBpcmF0aW9uIjp7ImJ1Y2tldCI6MTIwOTYwMCwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19ibHVlX3ZlcmlmaWVkX2JhZGdlIjp7ImJ1Y2tldCI6Im9mZiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9fQ%3D%3D&frame=false&hideCard=false&hideThread=false&id=1586953773066305537&lang=en&origin=https%3A%2F%2Ftwitterpicker.com%2F&sessionId=dfe1d75fddc7f819b85c9ece617a0cf4e8908b70&theme=dark&widgetsVersion=a3525f077c700%3A1667415560940&width=550px
+
+## Retweeted
+
+https://api.twitter.com/2/tweets/{}/retweeted_by
+
+根据推文id 查询转推用户的信息。
+
+## Likes
+
+Users who have liked a Tweet 
+
+根据推文id查询 like 用户信息
+
+https://api.twitter.com/2/tweets/{}/liking_users
+
+
+## Followers of user ID
+
+Returns a list of users who are followers of the specified user ID.
+
+查询关注了某个id的所有账户
+
+https://api.twitter.com/2/users/:id/followers
+
+
+## User Tweet timeline by ID
+
+Returns the most recent Tweets composed by a single user specified by the requested user ID.
+
+查询用户的发推记录
+
+https://api.twitter.com/2/users/:id/tweets
+
+## users/lookup
+
+查询用户信息
+
+https://api.twitter.com/1.1/users/lookup.json?user_id=902839045356744704
