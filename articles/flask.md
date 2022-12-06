@@ -1,14 +1,41 @@
 # Flask
 
+## 创建虚拟环境
+
+mkdir myproject
+cd myproject
+python3 -m venv venv
+
+## 激活虚拟环境
+
+. venv/bin/activate
+
+## 安装 Flask
+
+pip install Flask
+
 ## 启动服务器
 
 ### 1. 设置环境变量
 
 export FLASK_APP=app.py
 
+如果文件名为 app.py 或者 wsgi.py ，那么您不 需要设置 FLASK_APP 环境变量。
 ### 2. 启动
 
+flask run -h 0.0.0.0 -p 8001
+
+flask --app hello run
+
+这种可以不设置环境变量 FLASK_APP
+
+### 3. 调试模式
+
 flask run --debugger -h 0.0.0.0 -p 8001
+
+flask --debug run
+
+export FLASK_ENV=development
 
 ## 扩展
 
@@ -57,7 +84,7 @@ app.add_url_rule('/test', 'test', hello_world)
 
 app.url_map
 
-### URL 逆向解析（根据名称解析对应的URL）
+### URL 逆向解析（根据函数名称解析对应的URL）
 
 #### 1. url_for(url_name, **kwargs)
 
@@ -273,6 +300,30 @@ pip install mysqlclient
 数据库URI SQLALCHEMY_DATABASE_URI
 
 mysql://scott:tiger@localhost/mydatabase
+mysql://用户名:密码@地址/数据库名称
+
+绑定到 Flask 对象
+
+db = SQLAlchemy(app)
+
+ORM 模型创建
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+
+指定表名称
+
+__tablename__ = 'weibo_user'
+
+手动创建数据库
+
+创建表
+
+db.create_all(bind='db1')
+
+删除表
+
+db.drop_all()
 
 
 
